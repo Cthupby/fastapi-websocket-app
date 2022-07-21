@@ -3,7 +3,7 @@
 ## Технологии проекта:
 
 1. Web-framework: [FastAPI](https://fastapi.tiangolo.com/), [Starlette](https://www.starlette.io/)
-2. Database: [PostgreSQL](https://www.postgresql.org/)
+2. Database: [SQLAlchemy](https://www.sqlalchemy.org/), [SQLite](https://www.sqlite.org/index.html)
 
 ## Установка и использование  
 
@@ -22,4 +22,4 @@
 3. Установить рекомендуемые библиотеки  
    ```pip install --no-cache-dir --upgrade -r /fastapi_ws/requirements.txt```
 4. Запустить проект  
-   ```"uvicorn app.main:app --host 0.0.0.0 --port 80```  
+   ```uvicorn app.main:app --host 0.0.0.0 --port 80```  
