@@ -1,14 +1,14 @@
 from sqlalchemy import Column, Integer, Text
 from sqlalchemy.ext.declarative import declarative_base
 
-# объявление бд
+''' Объявление базы данных. '''
 Base = declarative_base()
 
 
-# таблица постов
+''' Модель таблицы постов. '''
 class Post(Base):
     __tablename__ = "post"
 
     id = Column(Integer, primary_key=True, index=True)
-    post_number = Column(Integer)  # нумерация поста
-    post = Column(Text)  # текст поста
+    post_number = Column(Integer)  # Порядковый номер поста.
+    post = Column(Text)  # Сожержание поста.

@@ -3,19 +3,22 @@ from sqlalchemy.orm import sessionmaker
 
 from . import models
 
-# адрес бд
+
+''' Aдрес базы данных SQLite. '''
 SQLALCHEMY_DATABASE_URL = "sqlite:///app/fws.db"
 
-# движок, который сессия будет использовать для подключения к бд
+'''
+Движок, который сессия будет использовать для подключения к базе данных.
+'''
 engine = create_engine(
     SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False}
 )
 
-# объявление сессии бд
+''' Объявление сессии базы данных.'''
 Session = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
-# создание сессии бд
+''' Создание сессии базы данных. '''
 session = Session()
 
-# создание базы данных с текущей сессией
+''' Создание базы данных с текущей сессией. '''
 models.Base.metadata.create_all(engine)
